@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>로그인</h1>
+    {#지금 당장 action사용하지 않아도 된다.#}
+    {#form tag안의 버튼은 제출용#}
+    {% if error %}
+        <h3>{{ error }}</h3>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <input name="username">
+        <input type="password" name="password">
+        <button type="submit">로그인</button>
+    </form>
+    {#form tag 내용은 views로 넘어간다#}
+</body>
+</html>
