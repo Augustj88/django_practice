@@ -18,7 +18,7 @@ def new(request):
             content = request.POST['content']
         )
         return redirect('detail', article.pk)
-        #글을 작성하고 글이 보이는 페이지로 이동, 글의 세부페이지로 이동 - article.pk pk는 db의 id값
+        #글을 작성하고 글이 보이는 페이지로 이동, 글의 세부페이지로 이동 - article.pk pk는 db의 id값이다.
     else:
         return render(request, 'blog/new.html')
 
