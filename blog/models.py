@@ -19,6 +19,6 @@ class Comment(models.Model):
 
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE) #댓글작성자
-    comment = models.CharField(max_length=256) #짧게 받을 때 한줄형태, char필드는 꼭 길이 명시!
+    comment = models.CharField(max_length=256) #짧게 받을 때 한줄형태, char필드는 꼭 길이 명시할 것!
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

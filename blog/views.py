@@ -18,12 +18,13 @@ def new(request):
             content = request.POST['content']
         )
         return redirect('detail', article.pk)
+
         #글을 작성하고 글이 보이는 페이지로 이동, 글의 세부페이지로 이동 - article.pk pk는 db의 id값이다.
     else:
         return render(request, 'blog/new.html')
 
 @login_required(login_url='signin')
-def detail(request, pk): #사용자가 어떤 글을 보고자 했는지 받아야한다. 그래서 pk사용
+def detail(request, pk): #사용자가 어떤 글을 보고자 했는지 받아야한다. 그래서 pk사용한다.
     article = Article.objects.get(pk=pk)
     # 댓글을 위한 부분
     if request.method == 'POST': # create 를 위한 부분
