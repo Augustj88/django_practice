@@ -3,4 +3,4 @@
 
 practice django
 
-making signup, signin system using django user model
+making signup, signin system using django basic user model
